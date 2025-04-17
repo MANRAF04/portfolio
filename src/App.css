@@ -189,6 +189,54 @@ body, html, .app-container {
   margin-bottom: 2.2rem;
 }
 
+.cv-download-section {
+  display: flex;
+  justify-content: center;
+  margin: 18px 0;
+}
+
+.cv-download-btn {
+  background: #232527;
+  color: #04d47d;
+  padding: 10px 28px;
+  border-radius: 24px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(4,212,125,0.08);
+  letter-spacing: 0.5px;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  border: 2px solid #04d47d;
+  display: inline-block;
+}
+
+.cv-download-btn:hover,
+.cv-download-btn:focus {
+  background: #04d47d;
+  color: #232527;
+  box-shadow: 0 4px 16px rgba(4,212,125,0.18);
+  text-decoration: none;
+}
+
+.cv-download-btn-fixed {
+  position: fixed;
+  top: 24px;
+  right: 32px;
+  z-index: 1000;
+  box-shadow: 0 4px 24px 0 #04724d33;
+  margin: 0;
+  opacity: 0.96;
+}
+
+.cv-download-btn-fixed:hover,
+.cv-download-btn-fixed:focus {
+  opacity: 1;
+  box-shadow: 0 8px 32px 0 #04d47d55;
+}
+
+.cv-download-btn-mobile {
+  display: none;
+}
+
 main {
   margin-top: 2rem;
 }
@@ -284,6 +332,108 @@ a:hover {
   fill: #d2ab99; /* accent color on hover */
 }
 
+.skills-section {
+  margin: 2.5rem 0 2rem 0;
+}
+
+.skills-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #47e6c1;
+  letter-spacing: 1px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+  align-items: stretch;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.skill-card {
+  background: #232527;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.10);
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 200px;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.skill-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 8px 32px 0 rgba(71,230,193,0.15);
+}
+
+.skill-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.7rem;
+}
+
+.skill-label {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #8db38b;
+  margin-bottom: 0.7rem;
+  letter-spacing: 0.5px;
+}
+
+.skill-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.skill-list li {
+  font-size: 1rem;
+  color: #bdbea9;
+  margin-bottom: 0.3rem;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 2rem 1.2rem 2rem;
+  background: #181a1b;
+  color: #bdbea9;
+  border-top: 1px solid #232527;
+  font-size: 1.1rem;
+  margin-top: 2rem;
+}
+
+.footer-social {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.footer-social a {
+  color: #bdbea9;
+  transition: color 0.2s;
+}
+
+.footer-social a:hover {
+  color: #04d47d;
+}
+
+.footer-signature {
+  display: flex;
+  align-items: center;
+  /* font-family: 'Pacifico', 'Caveat', cursive, sans-serif; */
+  /* font-size: 1.5rem; */
+  letter-spacing: 1px;
+  /* color: #04d47d; */
+  user-select: none;
+}
+
 @media (max-width: 600px) {
   .profile-section {
     flex-direction: column;
@@ -320,5 +470,25 @@ a:hover {
   }
   .social-links-wrapper {
     margin-bottom: 1.2rem;
+  }
+  .cv-download-btn-fixed {
+    display: none;
+  }
+  .cv-download-btn-mobile {
+    display: inline-block;
+    margin-top: 1.1em;
+    width: 100%;
+    text-align: center;
+    font-size: 1.08em;
+    box-sizing: border-box;
+  }
+  .footer {
+    flex-direction: column;
+    gap: 0.7rem;
+    font-size: 1rem;
+    padding: 1rem;
+  }
+  .footer-signature {
+    font-size: 1.1rem;
   }
 }

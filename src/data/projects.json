@@ -8,5 +8,15 @@
         "title": "Web-GCS for ArduPilot SITL",
         "description": "This project is a web-based application designed to act as a simple Ground Control Station (GCS) for controlling ArduPilot vehicles running in the Software-In-The-Loop (SITL) simulator. It provides a user-friendly interface accessible from a web browser to monitor telemetry and send basic commands locally.",
         "link": "https://github.com/MANRAF04/web-gcs"
+    },
+    {
+        "title": "PicAPark",
+        "description": "A mobile application that allows users to find and book parking spots in their area. It features a user-friendly interface and real-time availability updates.",
+        "link": "https://github.com/Giannoulas/picApark"
+    },
+    {
+        "title": "Plastic Swap",
+        "description": "An app that was supposed to act as a plastic wholesale market for new and recycled plastic.",
+        "link": "https://github.com/Giannoulas/plastic_swap"
     }
 ]

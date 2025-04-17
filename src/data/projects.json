@@ -1,0 +1,12 @@
+[
+    {
+        "title": "Online Video Rental",
+        "description": "A full-stack web application for managing a video club chain, built with Node.js, Express, PostgreSQL, and Docker. Users can browse movies, purchase them, track their watching status, and write reviews.",
+        "link": "https://github.com/MANRAF04/eight_spots"
+    },
+    {
+        "title": "Web-GCS for ArduPilot SITL",
+        "description": "This project is a web-based application designed to act as a simple Ground Control Station (GCS) for controlling ArduPilot vehicles running in the Software-In-The-Loop (SITL) simulator. It provides a user-friendly interface accessible from a web browser to monitor telemetry and send basic commands locally.",
+        "link": "https://github.com/MANRAF04/web-gcs"
+    }
+]

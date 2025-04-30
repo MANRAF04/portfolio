@@ -103,6 +103,83 @@ function App() {
           </div>
         </section>
         {/* Skills Section End */}
+        
+        {/* Teams Section Start */}
+        <section className="teams-section">
+          <h3 className="section-title">University Teams</h3>
+          <div className="teams-container">
+            {/* Team 1 */}
+            <div className="team-card">
+              <div className="team-header">
+                <div className="team-logo-container">
+                  <img 
+                    src={process.env.PUBLIC_URL + "/teams/brokenshells.png"} 
+                    alt="IEEE BrokenShells Logo" 
+                    className="team-logo-img" 
+                  />
+                </div>
+                <div className="team-info">
+                  <h4 className="team-name">IEEE BrokenShells</h4>
+                  <div className="team-period">2022 - Present</div>
+                </div>
+              </div>
+              <div className="team-role">
+                <strong>Role:</strong> Deputy Leader
+              </div>
+              <p className="team-description">
+                Focused on cybersecurity and ethical hacking, the team specializes in Capture The Flag (CTF) challenges and solving Hack The Box machines. We actively participate in national and international competitions, honing our skills in penetration testing, reverse engineering, and cryptography.
+              </p>
+            </div>
+            
+            {/* Team 2 */}
+            <div className="team-card">
+              <div className="team-header">
+                <div className="team-logo-container">
+                  <img 
+                    src={process.env.PUBLIC_URL + "/teams/starbound.png"} 
+                    alt="IEEE StarBound Logo" 
+                    className="team-logo-img" 
+                  />
+                </div>
+                <div className="team-info">
+                  <h4 className="team-name">IEEE StarBound</h4>
+                  <div className="team-period">2024 - Present</div>
+                </div>
+              </div>
+              <div className="team-role">
+                <strong>Role:</strong> Head of Software & Embedded Systems
+              </div>
+              <p className="team-description">
+                StarBound is a team focused on aerospace engineering, aiming to establish a research center in Volos. We work on various space-related projects and are currently developing a UAV to participate in the UAS Challenge 2026 in London.
+              </p>
+            </div>
+            
+            {/* Team 3 */}
+            <div className="team-card">
+              <div className="team-header">
+                <div className="team-logo-container">
+                  <img 
+                    src={process.env.PUBLIC_URL + "/teams/hermes.jpg"} 
+                    alt="HERMES Logo" 
+                    className="team-logo-img" 
+                  />
+                </div>
+                <div className="team-info">
+                  <h4 className="team-name">HERMES</h4>
+                  <div className="team-period">2022 - 2025</div>
+                </div>
+              </div>
+              <div className="team-role">
+                <strong>Role:</strong> Software Developer
+              </div>
+              <p className="team-description">
+                HERMES is a team dedicated to building a robotic exoskeleton from scratch for paraplegics. We participated in the Cybathlon 2024 competition in Zurich. My primary responsibilities included developing the user controller, which consisted of physical buttons and a screen that interfaced with the main program of the exoskeleton in real time. Additionally, I worked on the telemetry system to monitor and display all critical data effectively.
+              </p>
+            </div>
+          </div>
+        </section>
+        {/* Teams Section End */}
+        
         <main>
           <ProjectList />
         </main>

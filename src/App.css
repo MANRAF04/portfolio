@@ -434,6 +434,121 @@ a:hover {
   user-select: none;
 }
 
+/* Teams Section Styles */
+.teams-section {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  border-radius: 12px;
+  background-color: #1a1c1e;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+  color: #e0e0e0;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: 600;
+  position: relative;
+}
+
+.section-title:after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #4db6ac, #26a69a);
+  margin: 0.6rem auto 0;
+  border-radius: 2px;
+}
+
+.teams-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.team-card {
+  background-color: #232527;
+  border-radius: 10px;
+  padding: 1.25rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.team-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.team-logo-container {
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: #2c2e32;
+  overflow: hidden; /* Add overflow hidden to contain the image */
+}
+
+.team-logo {
+  font-size: 1.8rem;
+}
+
+/* Add styling for team logo images */
+.team-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* This will maintain aspect ratio */
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.team-info {
+  flex: 1;
+}
+
+.team-name {
+  color: #d4e8e6;
+  margin: 0 0 3px 0;
+  font-size: 1.1rem;
+}
+
+.team-period {
+  color: #8db38b;
+  font-size: 0.85rem;
+}
+
+.team-role {
+  color: #bdbea9;
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #36383c;
+}
+
+.team-description {
+  color: #a8a8a8;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+  .teams-container {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 600px) {
   .profile-section {
     flex-direction: column;

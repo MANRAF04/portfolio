@@ -1,5 +1,6 @@
 import React from "react";
 import ProjectList from "./components/ProjectList";
+import MusicPlayer from "./components/MusicPlayer/MusicPlayer";
 import "./App.css";
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
@@ -9,7 +10,7 @@ function GPAGauge({ value, max = 10 }) {
   // Use a more vibrant color for the filled path
   const vibrantColor = percent > 85 ? '#04d47d' : percent > 70 ? '#47e6c1' : percent > 50 ? '#f7b267' : '#e76f51';
   return (
-    <div style={{ width: 60, height: 60 }}>
+    <div style={{ width: 80, height: 80 }}>
       <CircularProgressbar
         value={percent}
         text={`${value.toFixed(2)}`}
@@ -22,7 +23,7 @@ function GPAGauge({ value, max = 10 }) {
           textSize: '1.2em',
         })}
       />
-      <div style={{ textAlign: 'center', color: '#bdbea9', fontSize: '0.8em', marginTop: 2 }}>GPA</div>
+      <div style={{ textAlign: 'center', color: '#bdbea9', fontSize: '0.9em', marginTop: 4 }}>GPA</div>
     </div>
   );
 }
@@ -39,6 +40,7 @@ function App() {
         <span role="img" aria-label="CV" style={{ marginRight: 8 }}>📄</span>
         Get my CV
       </a>
+      <MusicPlayer />
       <div className="app-container">
         <header className="profile-section">
           <img
@@ -56,8 +58,10 @@ function App() {
               <li><span className="bio-icon" role="img" aria-label="location">📍</span> Volos, Greece</li>
               <li><span className="bio-icon" role="img" aria-label="age">🎂</span> 21 years old</li>
               <li><span className="bio-icon" role="img" aria-label="university">🎓</span> 3rd year at University of Thessaly</li>
-              <li className="gpa-gauge-list"><GPAGauge value={8.82} max={10} /></li>
             </ul>
+            <div className="gpa-gauge-container">
+              <GPAGauge value={8.82} max={10} />
+            </div>
             <p className="bio-desc">
               I'm passionate about technology and always eager to learn something new. I love building creative solutions and enjoy exploring the ever-evolving world of engineering and software development.
             </p>

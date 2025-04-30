@@ -166,15 +166,15 @@ body, html, .app-container {
   font-weight: 400;
 }
 
-.gpa-gauge-list {
+.gpa-gauge-container {
   display: flex;
-  align-items: center;
   justify-content: center;
-  min-width: 80px;
-  margin-left: 0.2em;
-  /* Prevent flicker by setting position and z-index */
-  position: relative;
-  z-index: 2;
+  align-items: center;
+  margin: 2rem 0 2rem 30%;
+  padding: 8px 12px;
+  border-radius: 12px;
+  background: #1e2022;
+  width: fit-content;
 }
 
 .gpa-gauge {
@@ -490,5 +490,12 @@ a:hover {
   }
   .footer-signature {
     font-size: 1.1rem;
+  }
+  
+  .gpa-gauge-container {
+    margin: 0.8rem auto;
+    padding: 6px 10px;
+    align-self: center;
+    width: 90px;
   }
 }

@@ -1,0 +1,130 @@
+.audio-player-container {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 1000;
+}
+
+.audio-player {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 250px; /* Reduced from 300px */
+  height: 70px; /* Reduced from 80px */
+  background-color: #232527;
+  border-radius: 8px;
+  padding: 6px; /* Reduced from 8px */
+  box-sizing: border-box;
+  box-shadow: 0 4px 24px 0 rgba(4, 114, 77, 0.25);
+  border: 1px solid rgba(86, 135, 109, 0.3);
+}
+
+.album-cover {
+  width: 54px; /* Reduced from 64px */
+  height: 54px; /* Reduced from 64px */
+  background-color: #56876d;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  margin-right: 10px; /* Reduced from 12px */
+  box-shadow: 0 2px 12px 0 rgba(4, 114, 77, 0.35);
+}
+
+.player-controls {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.song-info {
+  margin-bottom: 6px; /* Reduced from 8px */
+}
+
+.song-title {
+  font-size: 13px; /* Reduced from 14px */
+  color: #8db38b;
+  margin: 0;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.artist {
+  font-size: 11px; /* Reduced from 12px */
+  color: #bdbea9;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 3px; /* Reduced from 4px */
+  background-color: #181a1b;
+  border-radius: 2px;
+  overflow: hidden;
+  margin-bottom: 5px; /* Reduced from 6px */
+}
+
+.progress {
+  height: 100%;
+  background-color: #04724d;
+  transform-origin: left;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between; /* Changed from flex-end to space evenly */
+}
+
+.play-btn,
+.pause-btn,
+.prev-btn,
+.next-btn {
+  background: #04724d;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease-in-out, background 0.2s;
+}
+
+.play-btn,
+.pause-btn {
+  width: 22px; /* Reduced from 24px */
+  height: 22px; /* Reduced from 24px */
+}
+
+.prev-btn,
+.next-btn {
+  width: 18px;
+  height: 18px;
+}
+
+.play-btn:hover,
+.pause-btn:hover,
+.prev-btn:hover,
+.next-btn:hover {
+  transform: scale(1.1);
+  background: #56876d;
+}
+
+/* Mobile styles */
+@media (max-width: 600px) {
+  .audio-player-container {
+    position: static;
+    margin: 20px auto;
+    width: 100%;
+  }
+  
+  .audio-player {
+    width: 100%;
+    max-width: 250px; /* Reduced from 300px */
+    margin: 0 auto;
+  }
+}

@@ -18,5 +18,10 @@
         "title": "Plastic Swap",
         "description": "An app that was supposed to act as a plastic wholesale market for new and recycled plastic.",
         "link": "https://github.com/Giannoulas/plastic_swap"
+    },
+    {
+        "title": "GymBro",
+        "description": "A fitness tracking application that allows users to log their exercises and monitor their progress.",
+        "link": "https://github.com/MANRAF04/GymBro"
     }
 ]

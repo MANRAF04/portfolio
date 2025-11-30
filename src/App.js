@@ -57,10 +57,10 @@ function App() {
             <ul className="bio-list">
               <li><span className="bio-icon" role="img" aria-label="location">📍</span> Volos, Greece</li>
               <li><span className="bio-icon" role="img" aria-label="age">🎂</span> 21 years old</li>
-              <li><span className="bio-icon" role="img" aria-label="university">🎓</span> 3rd year at University of Thessaly</li>
+              <li><span className="bio-icon" role="img" aria-label="university">🎓</span> 4th year at University of Thessaly</li>
             </ul>
             <div className="gpa-gauge-container">
-              <GPAGauge value={8.82} max={10} />
+              <GPAGauge value={8.65} max={10} />
             </div>
             <p className="bio-desc">
               I'm passionate about technology and always eager to learn something new. I love building creative solutions and enjoy exploring the ever-evolving world of engineering and software development.
@@ -84,7 +84,7 @@ function App() {
               <span className="skill-icon" role="img" aria-label="Programming">💻</span>
               <div className="skill-label">Programming</div>
               <ul className="skill-list">
-                <li>C/C++</li>
+                <li>C/C++/CUDA</li>
                 <li>Python</li>
                 <li>ESP32/Arduino/STM32</li>
                 <li>Dart/Flutter</li>
@@ -103,6 +103,35 @@ function App() {
           </div>
         </section>
         {/* Skills Section End */}
+        
+        {/* Experience Section Start */}
+        <section className="experience-section">
+          <h3 className="section-title">Work Experience</h3>
+          <div className="experience-container">
+            <div className="experience-card">
+              <div className="experience-header">
+                <div className="experience-company">
+                  <h4 className="company-name">
+                    <a href="https://www.agrobox.gr" target="_blank" rel="noopener noreferrer" className="company-link">
+                      Agrobox
+                    </a>
+                  </h4>
+                  <div className="experience-period">02/2025 - Present</div>
+                </div>
+              </div>
+              <div className="experience-role">
+                <strong>Position:</strong> Software Developer
+              </div>
+              <div className="experience-location">
+                <span role="img" aria-label="location">📍</span> Volos, Greece
+              </div>
+              <p className="experience-description">
+                Working on Agrobox, a comprehensive smart farming platform that helps farmers and agronomists manage agricultural land using cutting-edge technology. The platform integrates satellite data (Landsat-8, Sentinel-2), IoT sensors, and meteorological data to provide farmers with real-time insights on crop health, vegetation indices (NDVI), weather forecasts, and cultivation care recommendations. I contribute to developing features that support over 34 crop types and provide access to databases with 2,000+ fertilizers and 5,000+ approved pesticides.
+              </p>
+            </div>
+          </div>
+        </section>
+        {/* Experience Section End */}
         
         {/* Teams Section Start */}
         <section className="teams-section">

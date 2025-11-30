@@ -434,6 +434,92 @@ a:hover {
   user-select: none;
 }
 
+/* Experience Section Styles */
+.experience-section {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  border-radius: 12px;
+  background-color: #1a1c1e;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.experience-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.experience-card {
+  background-color: #232527;
+  border-radius: 10px;
+  padding: 1.25rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.experience-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.experience-header {
+  margin-bottom: 1rem;
+}
+
+.experience-company {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.company-name {
+  color: #d4e8e6;
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.company-link {
+  color: #04d47d;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.company-link:hover {
+  color: #47e6c1;
+  text-decoration: underline;
+}
+
+.experience-period {
+  color: #8db38b;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.experience-role {
+  color: #bdbea9;
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.experience-location {
+  color: #8db38b;
+  font-size: 0.9rem;
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #36383c;
+}
+
+.experience-description {
+  color: #a8a8a8;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
 /* Teams Section Styles */
 .teams-section {
   margin: 2rem 0;

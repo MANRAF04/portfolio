@@ -161,6 +161,56 @@ function App() {
             </a>
           </div>
         </header>
+        {/* Experience Section Start */}
+        <section className="experience-section">
+          <h3 className="section-title">Work Experience</h3>
+          <div className="experience-container">
+            <div className="experience-card">
+              <div className="experience-header">
+                <div className="experience-company">
+                  <h4 className="company-name">
+                    <a href="https://indeex.ai" target="_blank" rel="noopener noreferrer" className="company-link">
+                      Indeex
+                    </a>
+                  </h4>
+                  <div className="experience-period">04/2026 - Present</div>
+                </div>
+              </div>
+              <div className="experience-role">
+                <strong>Position:</strong> Full Stack Software Engineer
+              </div>
+              <div className="experience-location">
+                <span role="img" aria-label="location">📍</span> Volos, Greece
+              </div>
+              <p className="experience-description">
+                Working on Indeex, a digital twin platform that gives food & beverage manufacturers real-time visibility into their production lines with zero hardware changes. I work across the stack, from the ingestion pipeline that reads existing plant equipment to the web interface where teams track KPIs, spot anomalies, and optimize OEE.
+              </p>
+            </div>
+            <div className="experience-card">
+              <div className="experience-header">
+                <div className="experience-company">
+                  <h4 className="company-name">
+                    <a href="https://www.agrobox.gr" target="_blank" rel="noopener noreferrer" className="company-link">
+                      Agrobox
+                    </a>
+                  </h4>
+                  <div className="experience-period">02/2025 - 03/2026</div>
+                </div>
+              </div>
+              <div className="experience-role">
+                <strong>Position:</strong> Software Developer
+              </div>
+              <div className="experience-location">
+                <span role="img" aria-label="location">📍</span> Volos, Greece
+              </div>
+              <p className="experience-description">
+                Worked on Agrobox, a comprehensive smart farming platform that helps farmers and agronomists manage agricultural land using cutting-edge technology. The platform integrates satellite data (Landsat-8, Sentinel-2), IoT sensors, and meteorological data to provide farmers with real-time insights on crop health, vegetation indices (NDVI), weather forecasts, and cultivation care recommendations. I contributed to developing features that support over 34 crop types and provide access to databases with 2,000+ fertilizers and 5,000+ approved pesticides.
+              </p>
+            </div>
+          </div>
+        </section>
+        {/* Experience Section End */}
+        
         {/* Skills Section Start */}
         <section className="skills-section">
           <h3 className="skills-title">Skills</h3>
@@ -192,35 +242,6 @@ function App() {
         {/* Grades Section Start */}
         <Grades />
         {/* Grades Section End */}
-        
-        {/* Experience Section Start */}
-        <section className="experience-section">
-          <h3 className="section-title">Work Experience</h3>
-          <div className="experience-container">
-            <div className="experience-card">
-              <div className="experience-header">
-                <div className="experience-company">
-                  <h4 className="company-name">
-                    <a href="https://www.agrobox.gr" target="_blank" rel="noopener noreferrer" className="company-link">
-                      Agrobox
-                    </a>
-                  </h4>
-                  <div className="experience-period">02/2025 - Present</div>
-                </div>
-              </div>
-              <div className="experience-role">
-                <strong>Position:</strong> Software Developer
-              </div>
-              <div className="experience-location">
-                <span role="img" aria-label="location">📍</span> Volos, Greece
-              </div>
-              <p className="experience-description">
-                Working on Agrobox, a comprehensive smart farming platform that helps farmers and agronomists manage agricultural land using cutting-edge technology. The platform integrates satellite data (Landsat-8, Sentinel-2), IoT sensors, and meteorological data to provide farmers with real-time insights on crop health, vegetation indices (NDVI), weather forecasts, and cultivation care recommendations. I contribute to developing features that support over 34 crop types and provide access to databases with 2,000+ fertilizers and 5,000+ approved pesticides.
-              </p>
-            </div>
-          </div>
-        </section>
-        {/* Experience Section End */}
         
         {/* Teams Section Start */}
         <section className="teams-section">

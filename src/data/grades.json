@@ -1,0 +1,94 @@
+{
+  "overallGPA": 8.85,
+  "semesters": [
+    {
+      "number": 1,
+      "gpa": 8.9,
+      "courses": [
+        { "title": "Physics I", "period": "Feb 2023", "grade": 7.5 },
+        { "title": "Calculus I", "period": "Feb 2023", "grade": 8.0 },
+        { "title": "Programming I", "period": "Feb 2023", "grade": 10.0 },
+        { "title": "Linear Algebra", "period": "Feb 2023", "grade": 9.0 },
+        { "title": "Digital Design", "period": "Feb 2023", "grade": 10.0 },
+        { "title": "English Language and Technical Terminology", "period": "English Language Certificate", "grade": "P" }
+      ]
+    },
+    {
+      "number": 2,
+      "gpa": 9.04,
+      "courses": [
+        { "title": "Physics II", "period": "Jun 2023", "grade": 9.0 },
+        { "title": "Calculus II", "period": "Jun 2023", "grade": 8.5 },
+        { "title": "Programming II", "period": "Jun 2023", "grade": 10.0 },
+        { "title": "Discrete Mathematics", "period": "Jun 2023", "grade": 10.0 },
+        { "title": "Engineering Drawing", "period": "Jun 2023", "grade": 7.7 },
+        { "title": "Methodology for Writing Technical Reports", "period": "English Language Certificate", "grade": "P" }
+      ]
+    },
+    {
+      "number": 3,
+      "gpa": 7.86,
+      "courses": [
+        { "title": "Circuit Analysis I", "period": "Feb 2024", "grade": 7.3 },
+        { "title": "Electrical Measurements", "period": "Feb 2024", "grade": 9.0 },
+        { "title": "Data Structures", "period": "Feb 2024", "grade": 5.5 },
+        { "title": "Probability and Statistics", "period": "Feb 2024", "grade": 10.0 },
+        { "title": "Computer Organization and Design", "period": "Feb 2024", "grade": 7.5 }
+      ]
+    },
+    {
+      "number": 4,
+      "gpa": 8.58,
+      "courses": [
+        { "title": "Differential Equations", "period": "Jun 2024", "grade": 8.5 },
+        { "title": "Introduction to Electronics", "period": "Jun 2024", "grade": 9.5 },
+        { "title": "Algorithms", "period": "Jun 2024", "grade": 7.9 },
+        { "title": "Signals and Systems", "period": "Jun 2024", "grade": 8.0 },
+        { "title": "Numerical Analysis", "period": "Jun 2024", "grade": 9.0 }
+      ]
+    },
+    {
+      "number": 5,
+      "gpa": 9.7,
+      "courses": [
+        { "title": "Database Systems I", "period": "Feb 2025", "grade": 10.0 },
+        { "title": "Computer Networks I", "period": "Feb 2025", "grade": 10.0 },
+        { "title": "Automatic Control Systems", "period": "Feb 2025", "grade": 9.0 },
+        { "title": "Concurrent Programming", "period": "Feb 2025", "grade": 9.5 },
+        { "title": "Computer Graphics", "period": "Feb 2025", "grade": 10.0 }
+      ]
+    },
+    {
+      "number": 6,
+      "gpa": 7.8,
+      "courses": [
+        { "title": "Telecommunication Systems I", "period": "Jun 2025", "grade": 6.0 },
+        { "title": "Electromagnetic Fields I", "period": "Jun 2025", "grade": 7.5 },
+        { "title": "Electric Power Systems I", "period": "Jun 2025", "grade": 7.0 },
+        { "title": "Operating Systems", "period": "Jun 2025", "grade": 8.5 },
+        { "title": "Game Architecture and Development", "period": "Jun 2025", "grade": 10.0 }
+      ]
+    },
+    {
+      "number": 7,
+      "gpa": 9.25,
+      "courses": [
+        { "title": "Artificial Intelligence", "period": "Feb 2026", "grade": 10.0 },
+        { "title": "High Performance Computing Systems", "period": "Feb 2026", "grade": 8.0 },
+        { "title": "Logic and Functional Programming", "period": "Feb 2026", "grade": 9.0 },
+        { "title": "Parallel & Network Computing", "period": "Feb 2026", "grade": 10.0 }
+      ]
+    },
+    {
+      "number": 8,
+      "gpa": 9.7,
+      "courses": [
+        { "title": "Parallel Systems Architecture", "period": "Jun 2026", "grade": 9.0 },
+        { "title": "Network Optimization", "period": "Jun 2026", "grade": 9.5 },
+        { "title": "Blockchain Technologies and Decentralized Applications", "period": "Jun 2026", "grade": 10.0 },
+        { "title": "Advanced Data Management", "period": "Jun 2026", "grade": 10.0 },
+        { "title": "Network and Information Security", "period": "Jun 2026", "grade": 10.0 }
+      ]
+    }
+  ]
+}

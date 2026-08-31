@@ -1,0 +1,188 @@
+.grades-section {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  border-radius: 12px;
+  background-color: #1a1c1e;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.grades-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 1rem 1.25rem;
+  border: none;
+  border-radius: 10px;
+  background-color: #232527;
+  color: #d4e8e6;
+  font-family: inherit;
+  font-size: 1.05rem;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.grades-toggle:hover,
+.grades-toggle:focus-visible {
+  background-color: #2c2e32;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.grades-toggle-label {
+  flex: 1;
+}
+
+.grades-overall {
+  color: #8db38b;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.grades-overall strong {
+  color: #04d47d;
+  font-size: 1.1rem;
+  margin-left: 0.35rem;
+}
+
+.chevron {
+  display: inline-block;
+  color: #04d47d;
+  font-size: 0.9rem;
+  transition: transform 0.2s ease;
+}
+
+.chevron-open {
+  transform: rotate(90deg);
+}
+
+.grades-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.semester-card {
+  background-color: #232527;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.semester-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 0.85rem 1.25rem;
+  border: none;
+  background: transparent;
+  color: #d4e8e6;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.semester-header:hover,
+.semester-header:focus-visible {
+  background-color: #2c2e32;
+}
+
+.semester-name {
+  flex: 1;
+}
+
+.semester-gpa {
+  font-size: 1rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.course-list {
+  list-style: none;
+  margin: 0;
+  padding: 0 1.25rem 0.85rem 1.25rem;
+}
+
+.course-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.85rem;
+  padding: 0.6rem 0.75rem;
+  border-top: 1px solid #36383c;
+}
+
+.course-details {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 2px;
+}
+
+.course-title {
+  color: #bdbea9;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.course-period {
+  color: #7a7c7e;
+  font-size: 0.78rem;
+}
+
+.course-grade {
+  flex: 0 0 3rem;
+  font-size: 0.98rem;
+  font-weight: 600;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.grade-high {
+  color: #04d47d;
+}
+
+.grade-mid {
+  color: #f7b267;
+}
+
+.grade-low {
+  color: #e76f51;
+}
+
+.grade-pass {
+  color: #8db38b;
+}
+
+@media (max-width: 600px) {
+  .grades-section {
+    padding: 1.2rem 1rem;
+  }
+  .grades-toggle {
+    flex-wrap: wrap;
+    padding: 0.85rem 1rem;
+    font-size: 1rem;
+  }
+  .grades-overall {
+    flex-basis: 100%;
+    padding-left: 1.65rem;
+  }
+  .semester-header {
+    padding: 0.85rem 1rem;
+  }
+  .course-list {
+    padding: 0 1rem 0.85rem 1rem;
+  }
+  .course-row {
+    padding: 0.6rem 0.6rem;
+  }
+  .course-title {
+    font-size: 0.9rem;
+  }
+}

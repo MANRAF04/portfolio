@@ -1,6 +1,7 @@
 import React from "react";
 import ProjectList from "./components/ProjectList";
 import MusicPlayer from "./components/MusicPlayer/MusicPlayer";
+import Grades from "./components/Grades/Grades";
 import "./App.css";
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
@@ -57,10 +58,10 @@ function App() {
             <ul className="bio-list">
               <li><span className="bio-icon" role="img" aria-label="location">📍</span> Volos, Greece</li>
               <li><span className="bio-icon" role="img" aria-label="age">🎂</span> 21 years old</li>
-              <li><span className="bio-icon" role="img" aria-label="university">🎓</span> 4th year at University of Thessaly</li>
+              <li><span className="bio-icon" role="img" aria-label="university">🎓</span> 5th year at University of Thessaly</li>
             </ul>
             <div className="gpa-gauge-container">
-              <GPAGauge value={8.65} max={10} />
+              <GPAGauge value={8.85} max={10} />
             </div>
             <p className="bio-desc">
               I'm passionate about technology and always eager to learn something new. I love building creative solutions and enjoy exploring the ever-evolving world of engineering and software development.
@@ -103,6 +104,10 @@ function App() {
           </div>
         </section>
         {/* Skills Section End */}
+
+        {/* Grades Section Start */}
+        <Grades />
+        {/* Grades Section End */}
         
         {/* Experience Section Start */}
         <section className="experience-section">

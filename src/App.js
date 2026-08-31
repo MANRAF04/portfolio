@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import ProjectList from "./components/ProjectList";
 import MusicPlayer from "./components/MusicPlayer/MusicPlayer";
 import Grades from "./components/Grades/Grades";
@@ -6,25 +6,109 @@ import "./App.css";
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 
-function GPAGauge({ value, max = 10 }) {
-  const percent = Math.min((value / max) * 100, 100);
-  // Use a more vibrant color for the filled path
-  const vibrantColor = percent > 85 ? '#04d47d' : percent > 70 ? '#47e6c1' : percent > 50 ? '#f7b267' : '#e76f51';
+const GAUGE_ANIMATION_MS = 1600;
+
+function prefersReducedMotion() {
   return (
-    <div style={{ width: 80, height: 80 }}>
-      <CircularProgressbar
-        value={percent}
-        text={`${value.toFixed(2)}`}
-        maxValue={100}
-        styles={buildStyles({
-          pathColor: vibrantColor,
-          textColor: '#8db38b',
-          trailColor: '#232527',
-          backgroundColor: '#181a1b',
-          textSize: '1.2em',
-        })}
-      />
-      <div style={{ textAlign: 'center', color: '#bdbea9', fontSize: '0.9em', marginTop: 4 }}>GPA</div>
+    typeof window !== "undefined" &&
+    typeof window.matchMedia === "function" &&
+    window.matchMedia("(prefers-reduced-motion: reduce)").matches
+  );
+}
+
+function useInView(threshold = 0.4) {
+  const ref = useRef(null);
+  const [inView, setInView] = useState(false);
+
+  useEffect(() => {
+    const node = ref.current;
+    if (!node || typeof IntersectionObserver === "undefined") {
+      setInView(true);
+      return undefined;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((entry) => entry.isIntersecting)) {
+          setInView(true);
+          observer.disconnect();
+        }
+      },
+      { threshold }
+    );
+    observer.observe(node);
+
+    return () => observer.disconnect();
+  }, [threshold]);
+
+  return [ref, inView];
+}
+
+// Kept separate from the gauge so the counting frames never re-render the SVG.
+function CountUpValue({ target, durationMs, active, decimals = 2 }) {
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    if (!active) {
+      return undefined;
+    }
+    if (prefersReducedMotion()) {
+      setCurrent(target);
+      return undefined;
+    }
+
+    let frame = null;
+    let startTime = null;
+    const step = (now) => {
+      if (startTime === null) {
+        startTime = now;
+      }
+      const progress = Math.min((now - startTime) / durationMs, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      setCurrent(target * eased);
+      if (progress < 1) {
+        frame = requestAnimationFrame(step);
+      }
+    };
+    frame = requestAnimationFrame(step);
+
+    return () => {
+      if (frame !== null) {
+        cancelAnimationFrame(frame);
+      }
+    };
+  }, [target, durationMs, active]);
+
+  return <div className="gpa-gauge-value">{current.toFixed(decimals)}</div>;
+}
+
+function GPAGauge({ value, max = 10 }) {
+  const [gaugeRef, isVisible] = useInView();
+  const [reducedMotion] = useState(prefersReducedMotion);
+  const percent = Math.min((value / max) * 100, 100);
+  const vibrantColor = percent > 85 ? '#04d47d' : percent > 70 ? '#47e6c1' : percent > 50 ? '#f7b267' : '#e76f51';
+
+  const gaugeStyles = useMemo(
+    () =>
+      buildStyles({
+        pathColor: vibrantColor,
+        textColor: '#8db38b',
+        trailColor: '#232527',
+        backgroundColor: '#181a1b',
+        pathTransition: reducedMotion
+          ? 'none'
+          : `stroke-dashoffset ${GAUGE_ANIMATION_MS}ms cubic-bezier(0.22, 1, 0.36, 1)`,
+      }),
+    [vibrantColor, reducedMotion]
+  );
+
+  return (
+    <div ref={gaugeRef} className="gpa-gauge-wrapper">
+      <div className="gpa-gauge-track">
+        <CircularProgressbar value={isVisible ? percent : 0} maxValue={100} styles={gaugeStyles} />
+        <CountUpValue target={value} durationMs={GAUGE_ANIMATION_MS} active={isVisible} />
+      </div>
+      <div className="gpa-gauge-label">GPA</div>
     </div>
   );
 }
